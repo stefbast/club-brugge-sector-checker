@@ -12,7 +12,8 @@ COUNT=$(echo "$RESPONSE" | jq '.sectors | length')
 
 if (( COUNT > 0 )); then
   echo "Sectors found! Sending ping..."
-  curl -fsS "https://hc-ping.com/${HC_PING}" > /dev/null
+  
 else
   echo "No sectors found."
+  curl -fsS "https://hc-ping.com/${HC_PING}" > /dev/null
 fi
