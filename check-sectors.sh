@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Healthchecks.io ping URL (replace this with your own)
-PING_URL="https://hc-ping.com/YOUR-UUID-HERE"
+echo "Run at: $(date -u)" >> run-log.txt
 
 # Perform POST request and parse the JSON
 RESPONSE=$(curl -s -X POST "https://tickets.clubbrugge.be/Stadium/GetWGLSectorsInfo?eventId=8175" -H "Content-Type: application/json" -H "Content-Length: 0" --compressed)
