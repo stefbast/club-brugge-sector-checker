@@ -1,22 +1,22 @@
-name: Club Brugge Sector Checker
+# name: Club Brugge Sector Checker
 
-on:
-  schedule:
-    - cron: "* * * * *"  # every minute
-  workflow_dispatch:
+# on:
+#   schedule:
+#     - cron: "* * * * *"  # every minute
+#   workflow_dispatch:
 
-jobs:
-  check:
-    runs-on: ubuntu-latest
+# jobs:
+#   check:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
 
-      - name: Install jq
-        run: sudo apt-get install -y jq
+#       - name: Install jq
+#         run: sudo apt-get install -y jq
 
-      - name: Run sector check
-        run: ./check-sectors.sh
-        env:
-          HC_PING: ${{ secrets.HC_PING }}
+#       - name: Run sector check
+#         run: ./check-sectors.sh
+#         env:
+#           HC_PING: ${{ secrets.HC_PING }}
